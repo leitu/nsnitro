@@ -100,6 +100,7 @@ class NSLBVServer(NSBaseResource):
                         'statechangetimeseconds': '',
                         'statechangetimemsec': '',
                         'tickssincelaststatechange': '',
+                        'appflowlog': '',
                         '__count': ''}
 
         self.resourcetype = NSLBVServer.get_resourcetype()
@@ -1456,6 +1457,11 @@ class NSLBVServer(NSBaseResource):
         Default value: 0
         """
         return self.options['tickssincelaststatechange']
+    def set_appflowlog(self, appflowlog):
+        self.options['appflowlog'] = appflowlog
+
+    def get_appflowlog(self):
+        return self.options['appflowlog']
 
     # Operations methods
     @staticmethod
